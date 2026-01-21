@@ -1,0 +1,15 @@
+# IMPORTATION DES PACKAGES
+import numpy as np
+import pandas as pd
+import os
+
+# Check the file path
+file_path = 'Top Anime data.csv'
+if not os.path.isfile(file_path):
+    raise FileNotFoundError(f"File '{file_path}' not found.")
+
+# Load the data with the correct separator and encoding
+data = pd.read_csv(file_path, sep=',', encoding='utf-8')
+
+# VISUALISATION DE NOTRE DATASET
+data.head()
